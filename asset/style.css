@@ -1,0 +1,1600 @@
+
+@import url(https://fonts.googleapis.com/css?family=Damion);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:800);
+
+* {
+    box-sizing: border-box;
+    font-weight: normal;
+}
+body {
+    background: #000;
+    margin: 0;
+  }
+
+
+body .birthday .add {
+    margin-top: 40px;
+    clear: both;
+    font-family: 'Damion', cursive;
+    background: transparent;
+    border: 2px solid #e77572;
+    color: #e77572;
+    font-size: 22px;
+    padding: 14px 28px;
+    border-radius: 40px;
+    transition: all 0.23s;
+    outline: none;
+    cursor: pointer;
+}
+
+body .birthday .add:hover {
+    background: #e77572;
+    color: white;
+}
+
+body .birthday_inner__modal {
+    width: 500px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    transition: all 0.4s;
+    margin: auto;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%) scale(0);
+    background: white;
+    border-radius: 20px;
+    z-index: 2;
+    padding: 40px 40px 100px 40px;
+    box-shadow: 0px 3px 10px 0px #e5b4b2;
+}
+
+body .birthday_inner__modal .modal_image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(-60%);
+}
+
+body .birthday_inner__modal .modal_image img {
+    width: 100px;
+}
+
+body .birthday_inner__modal h1 {
+    color: #e77572;
+    margin: 0;
+}
+
+body .birthday_inner__modal p {
+    font-family: 'georgia';
+    font-size: 13px;
+    color: #b9918e;
+}
+
+body .birthday_inner__modal button {
+    background: #e77572;
+    color: white;
+    outline: none;
+    padding: 20px 20px 20px 20px;
+    border: none;
+    width: 100%;
+    font-size: 20px;
+    font-family: 'Damion', cursive;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    cursor: pointer;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+body .birthday_inner__modal button:hover {
+    background: #e3605c;
+}
+
+body .birthday_inner .stage1 {
+    display: block;
+}
+
+body .birthday_inner__stage {
+    width: 500px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    top: 50%;
+    display: none;
+    transform: translateY(-50%);
+}
+
+body .birthday_inner__stage h1 {
+    color: #e77572;
+    margin: 0;
+}
+
+body .birthday_inner__stage h2 {
+    font-family: 'georgia';
+    font-size: 12px;
+    color: #b9918e;
+    line-height: 18px;
+    margin: 0;
+}
+
+body .birthday_inner__stage .mix {
+    margin: 80px 0px 10px 0px;
+    position: relative;
+}
+
+body .birthday_inner__stage .mix_spoon {
+    position: absolute;
+    top: -37px;
+    left: 200px;
+    -webkit-transform: rotate(0deg) translateX(15px) translateY(3px) rotate(0deg) scale(1);
+}
+
+body .birthday_inner__stage .mix .move {
+    animation: mix 1s 0s linear;
+}
+
+body .birthday_inner__stage img.intro {
+    width: 300px;
+    transform: scale(0);
+    animation: bounce 0.6s 1s forwards, moveup 0.6s 2s forwards;
+    position: relative;
+    top: 0px;
+}
+
+body .birthday_inner__stage .oven {
+    margin-top: 50px;
+    margin-bottom: -40px;
+}
+
+body .birthday_inner__stage .oven img {
+    width: 290px;
+    position: relative;
+    left: -10px;
+}
+
+body .birthday_inner__stage .tin img {
+    width: 90px;
+}
+
+body .birthday_inner__stage .candle {
+    position: Relative;
+    opacity: 0;
+    animation: candle 1s 1.3s forwards;
+    top: 10px;
+}
+
+body .birthday_inner__stage .candle img {
+    width: 10px;
+}
+
+body .birthday_inner__stage .startagain {
+    position: absolute;
+    right: 0;
+    top: 350px;
+    font-size: 24px;
+    color: #e77572;
+}
+
+body .birthday_inner__stage .cakemake {
+    margin-top: 230px;
+    clear: both;
+    text-align: center;
+}
+
+body .birthday_inner__stage .cakemake .base,
+body .birthday_inner__stage .cakemake .sponge {
+    height: 40px;
+    margin: 0 auto;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    margin-bottom: -10px;
+    position: relative;
+    background-image: -webkit-repeating-linear-gradient(-45deg, transparent, transparent 5px, rgba(255, 255, 255, .2) 5px, rgba(255, 255, 255, .2) 10px);
+}
+
+body .birthday_inner__stage .cakemake .base div,
+body .birthday_inner__stage .cakemake .sponge div {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background: Red;
+    border-radius: 100px;
+    top: -5px;
+    z-index: 4;
+}
+
+body .birthday_inner__stage .cakemake .base div:nth-of-type(1),
+body .birthday_inner__stage .cakemake .sponge div:nth-of-type(1) {
+    left: 0%;
+    margin-left: 6px;
+}
+
+body .birthday_inner__stage .cakemake .base div:nth-of-type(2),
+body .birthday_inner__stage .cakemake .sponge div:nth-of-type(2) {
+    left: 20%;
+    margin-left: 6px;
+}
+
+body .birthday_inner__stage .cakemake .base div:nth-of-type(3),
+body .birthday_inner__stage .cakemake .sponge div:nth-of-type(3) {
+    left: 40%;
+    margin-left: 6px;
+}
+
+body .birthday_inner__stage .cakemake .base div:nth-of-type(4),
+body .birthday_inner__stage .cakemake .sponge div:nth-of-type(4) {
+    left: 60%;
+    margin-left: 6px;
+}
+
+body .birthday_inner__stage .cakemake .base div:nth-of-type(5),
+body .birthday_inner__stage .cakemake .sponge div:nth-of-type(5) {
+    left: 80%;
+    margin-left: 6px;
+}
+
+body .birthday_inner__stage .cakemake .base div:nth-of-type(6),
+body .birthday_inner__stage .cakemake .sponge div:nth-of-type(6) {
+    left: 100%;
+    margin-left: 6px;
+}
+
+body .birthday_inner__stage .cakemake .base div:nth-of-type(7),
+body .birthday_inner__stage .cakemake .sponge div:nth-of-type(7) {
+    left: 120%;
+    margin-left: 6px;
+}
+
+body .birthday_inner__stage .cakemake .base div:nth-of-type(8),
+body .birthday_inner__stage .cakemake .sponge div:nth-of-type(8) {
+    left: 140%;
+    margin-left: 6px;
+}
+
+body .birthday_inner__stage .cakemake .base div:nth-of-type(9),
+body .birthday_inner__stage .cakemake .sponge div:nth-of-type(9) {
+    left: 160%;
+    margin-left: 6px;
+}
+
+body .birthday_inner__stage .cakemake .base div:nth-of-type(10),
+body .birthday_inner__stage .cakemake .sponge div:nth-of-type(10) {
+    left: 180%;
+    margin-left: 6px;
+}
+
+body .birthday_inner__stage .cakemake .filling {
+    height: 10px;
+    margin: 0 auto;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    margin-bottom: -1px;
+    position: relative;
+    z-index: 1;
+    top: 9px;
+}
+
+body .birthday_inner__stage .cakemake .filling div {
+    display: block;
+    width: 12.5%;
+    float: left;
+    height: 16px;
+    background: black;
+    border-radius: 100%;
+}
+
+body .birthday_inner__stage .cakemake .base {
+    width: 200px;
+    background-color: #ffd296;
+}
+
+body .birthday_inner__stage .cakemake .sponge {
+    width: 200px;
+}
+
+body .birthday_inner__stage .cakemake .filling {
+    width: 200px;
+}
+
+body .birthday_inner__stage .cakemake .sponge-vanilla {
+    background-color: #ffd296;
+}
+
+body .birthday_inner__stage .cakemake .sponge-vanilla div {
+    background: #caa068;
+}
+
+body .birthday_inner__stage .cakemake .sponge-strawberry {
+    background-color: #ff99a3;
+}
+
+body .birthday_inner__stage .cakemake .sponge-strawberry div {
+    background: #e27983;
+}
+
+body .birthday_inner__stage .cakemake .sponge-fruit {
+    background-color: #d5ccb2;
+}
+
+body .birthday_inner__stage .cakemake .sponge-fruit div {
+    background: #a9a088;
+}
+
+body .birthday_inner__stage .cakemake .filling-jam {
+    background: #e75656;
+}
+
+body .birthday_inner__stage .cakemake .filling-jam div {
+    background: #e75656;
+}
+
+body .birthday_inner__stage .cakemake .filling-cream {
+    background: #fff;
+}
+
+body .birthday_inner__stage .cakemake .filling-cream div {
+    background: #fff;
+}
+
+body .birthday_inner__stage .cakemake .filling-choc {
+    background: #9f3d28;
+}
+
+body .birthday_inner__stage .cakemake .filling-choc div {
+    background: #9f3d28;
+}
+
+body .birthday_inner__stage .cakemake .filling-lemon {
+    background: #e8e086;
+}
+
+body .birthday_inner__stage .cakemake .filling-lemon div {
+    background: #e8e086;
+}
+
+body .birthday_inner__stage .options {
+    position: relative;
+    left: 12px;
+}
+
+body .birthday_inner__stage .options .sponges {
+    margin-right: 40px;
+}
+
+body .birthday_inner__stage .options .inactive {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+body .birthday_inner__stage .options .sponges,
+body .birthday_inner__stage .options .fillings {
+    float: left;
+    position: relative;
+}
+
+body .birthday_inner__stage .options .sponges h3,
+body .birthday_inner__stage .options .fillings h3 {
+    text-align: left;
+    color: #a25a58;
+    font-size: 20px;
+}
+
+body .birthday_inner__stage .options .sponges h5,
+body .birthday_inner__stage .options .fillings h5 {
+    float: right;
+    margin: 0;
+    color: #e77572;
+    position: absolute;
+    top: 20px;
+    right: 14px;
+    font-size: 20px;
+}
+
+body .birthday_inner__stage .options .sponges .item,
+body .birthday_inner__stage .options .fillings .item {
+    float: left;
+    margin-right: 14px;
+}
+
+body .birthday_inner__stage .options .sponges .item_inner,
+body .birthday_inner__stage .options .fillings .item_inner {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(0, 0, 0, 0.07);
+    border-radius: 8px;
+    margin-bottom: 5px;
+    transition: all 0.12s;
+}
+
+body .birthday_inner__stage .options .sponges .item_inner:hover,
+body .birthday_inner__stage .options .fillings .item_inner:hover {
+    border: 3px solid white;
+}
+
+body .birthday_inner__stage .options .sponges .item .vanilla,
+body .birthday_inner__stage .options .fillings .item .vanilla {
+    background: #ffd296;
+}
+
+body .birthday_inner__stage .options .sponges .item .strawberry,
+body .birthday_inner__stage .options .fillings .item .strawberry {
+    background: #ff99a3;
+}
+
+body .birthday_inner__stage .options .sponges .item .fruit,
+body .birthday_inner__stage .options .fillings .item .fruit {
+    background: #d5ccb2;
+}
+
+body .birthday_inner__stage .options .sponges .item .jam,
+body .birthday_inner__stage .options .fillings .item .jam {
+    background: #e75656;
+}
+
+body .birthday_inner__stage .options .sponges .item .cream,
+body .birthday_inner__stage .options .fillings .item .cream {
+    background: #fff;
+}
+
+body .birthday_inner__stage .options .sponges .item .choc,
+body .birthday_inner__stage .options .fillings .item .choc {
+    background: #9f3d28;
+}
+
+body .birthday_inner__stage .options .sponges .item .lemon,
+body .birthday_inner__stage .options .fillings .item .lemon {
+    background: #e8e086;
+}
+
+body .birthday_inner__stage .options .sponges .item h4,
+body .birthday_inner__stage .options .fillings .item h4 {
+    margin: 0;
+    color: #e77572;
+}
+
+body .birthday_inner__stage button {
+    clear: both;
+    font-family: 'Damion', cursive;
+    background: transparent;
+    border: 2px solid #e77572;
+    color: #e77572;
+    font-size: 22px;
+    padding: 14px 28px;
+    border-radius: 40px;
+    transition: all 0.23s;
+    outline: none;
+    cursor: pointer;
+}
+
+body .birthday_inner__stage button:hover {
+    background: #e77572;
+    color: white;
+}
+
+body .birthday_inner__stage .start {
+    margin-top: 30px;
+    animation: in 0.8s 2.9s forwards;
+    position: relative;
+    top: -20px;
+    opacity: 0;
+}
+
+.sa {
+    margin-top: 70px;
+    display: none;
+}
+
+.svg {
+    margin-bottom: 40px;
+}
+
+svg {
+    width: 590px;
+    height: 90px;
+    margin-bottom: -20px;
+    display: none;
+    font: 3em Open Sans, Impact;
+    text-transform: uppercase;
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(0);
+    }
+
+    25% {
+        transform: scale(1.06);
+    }
+
+    50% {
+        transform: scale(0.965);
+    }
+
+    75% {
+        transform: scale(1.02);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes moveup {
+    from {
+        top: 0;
+    }
+
+    to {
+        top: -30px;
+    }
+}
+
+@keyframes mix {
+    0% {
+        transform: translateX(0px);
+    }
+
+    50% {
+        transform: translateX(28px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes candle {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.text path {
+    animation: dash_loader 4s 2s forwards;
+}
+
+@keyframes dash_loader {
+    to {
+        stroke-dasharray: 920;
+    }
+}
+
+path,
+polyline,
+line {
+    stroke-dasharray: 718;
+    stroke-dashoffset: 750;
+    stroke-width: 1px;
+    stroke-miterlimit: 40;
+    stroke-linejoin: round;
+    fill: none;
+    stroke: #e77572;
+    z-index: 1;
+    opacity: 1;
+}
+/* LOVE SCENE */
+#love_scene{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:#000;
+    z-index:9999;
+  }
+  
+  /* GALERI */
+  #gallery_slide{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:#ffe4ec;
+    z-index:9999;
+  }
+  
+  /* slider */
+  .slider{
+    width:100%;
+    overflow:hidden;
+    margin-top:100px;
+  }
+  /* penting banget */
+#love_scene {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 9999;
+    overflow: hidden;
+  }
+  
+  /* biar animasi ga ketutup */
+  #love_scene #ui {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .track{
+    display:flex;
+    width:max-content;
+    animation:scroll 20s linear infinite;
+  }
+  
+  .track img{
+    width:200px;
+    height:200px;
+    margin:10px;
+    border-radius:20px;
+    object-fit:cover;
+  }
+  
+  /* animasi geser */
+  @keyframes scroll{
+    from{transform:translateX(100%);}
+    to{transform:translateX(-100%);}
+  }
+  
+  #gallery_slide {
+    position: fixed;
+    width:100%;
+    height:100%;
+    background:#ffe4ec;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+    z-index:9999;
+  }
+  
+  .slider {
+    width:100%;
+    overflow:hidden;
+  }
+  
+  .track {
+    display:flex;
+    width:max-content;
+    animation:scroll 20s linear infinite;
+  }
+  
+  .track img {
+    width:200px;
+    height:200px;
+    margin:10px;
+    border-radius:20px;
+    object-fit:cover;
+  }
+  
+  @keyframes scroll {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+  }
+ 
+  
+  #btn-make {
+    bottom: 200px;
+    right: 30px;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .div_btn {
+    position: fixed;
+    cursor: pointer;
+    width: 55px;
+    height: 55px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    font-size: 2em;
+    line-height: 58px;
+    text-align: center;
+    z-index: 999;
+  }
+  #div_support {
+    bottom: 80px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  body {
+    background: #000;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  #ui .love {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -225px 0 0 -225px;
+  }
+  #ui .love:last-child .love_word {
+    color: #fff;
+    font-size: 2rem;
+    text-shadow: 0 0 10px #ea80b0;
+  }
+  #ui .love_word {
+    color: #ea80b0;
+    font-size: 1.4rem;
+    transform: translateY(-100%) rotateZ(-30deg);
+    font-family: "Dosis", sans-serif;
+    text-shadow: 0 0 10px #fff;
+    letter-spacing: 2px;
+  }
+  #ui .love_horizontal {
+    animation: horizontal 10000ms infinite alternate ease-in-out;
+  }
+  #ui .love_vertical {
+    animation: vertical 20000ms infinite linear;
+  }
+  #ui .love:nth-child(1) .love_horizontal {
+    animation-delay: -300ms;
+  }
+  #ui .love:nth-child(1) .love_vertical {
+    animation-delay: -300ms;
+  }
+  #ui .love:nth-child(2) .love_horizontal {
+    animation-delay: -600ms;
+  }
+  #ui .love:nth-child(2) .love_vertical {
+    animation-delay: -600ms;
+  }
+  #ui .love:nth-child(3) .love_horizontal {
+    animation-delay: -900ms;
+  }
+  #ui .love:nth-child(3) .love_vertical {
+    animation-delay: -900ms;
+  }
+  #ui .love:nth-child(4) .love_horizontal {
+    animation-delay: -1200ms;
+  }
+  #ui .love:nth-child(4) .love_vertical {
+    animation-delay: -1200ms;
+  }
+  #ui .love:nth-child(5) .love_horizontal {
+    animation-delay: -1500ms;
+  }
+  #ui .love:nth-child(5) .love_vertical {
+    animation-delay: -1500ms;
+  }
+  #ui .love:nth-child(6) .love_horizontal {
+    animation-delay: -1800ms;
+  }
+  #ui .love:nth-child(6) .love_vertical {
+    animation-delay: -1800ms;
+  }
+  #ui .love:nth-child(7) .love_horizontal {
+    animation-delay: -2100ms;
+  }
+  #ui .love:nth-child(7) .love_vertical {
+    animation-delay: -2100ms;
+  }
+  #ui .love:nth-child(8) .love_horizontal {
+    animation-delay: -2400ms;
+  }
+  #ui .love:nth-child(8) .love_vertical {
+    animation-delay: -2400ms;
+  }
+  #ui .love:nth-child(9) .love_horizontal {
+    animation-delay: -2700ms;
+  }
+  #ui .love:nth-child(9) .love_vertical {
+    animation-delay: -2700ms;
+  }
+  #ui .love:nth-child(10) .love_horizontal {
+    animation-delay: -3000ms;
+  }
+  #ui .love:nth-child(10) .love_vertical {
+    animation-delay: -3000ms;
+  }
+  #ui .love:nth-child(11) .love_horizontal {
+    animation-delay: -3300ms;
+  }
+  #ui .love:nth-child(11) .love_vertical {
+    animation-delay: -3300ms;
+  }
+  #ui .love:nth-child(12) .love_horizontal {
+    animation-delay: -3600ms;
+  }
+  #ui .love:nth-child(12) .love_vertical {
+    animation-delay: -3600ms;
+  }
+  #ui .love:nth-child(13) .love_horizontal {
+    animation-delay: -3900ms;
+  }
+  #ui .love:nth-child(13) .love_vertical {
+    animation-delay: -3900ms;
+  }
+  #ui .love:nth-child(14) .love_horizontal {
+    animation-delay: -4200ms;
+  }
+  #ui .love:nth-child(14) .love_vertical {
+    animation-delay: -4200ms;
+  }
+  #ui .love:nth-child(15) .love_horizontal {
+    animation-delay: -4500ms;
+  }
+  #ui .love:nth-child(15) .love_vertical {
+    animation-delay: -4500ms;
+  }
+  #ui .love:nth-child(16) .love_horizontal {
+    animation-delay: -4800ms;
+  }
+  #ui .love:nth-child(16) .love_vertical {
+    animation-delay: -4800ms;
+  }
+  #ui .love:nth-child(17) .love_horizontal {
+    animation-delay: -5100ms;
+  }
+  #ui .love:nth-child(17) .love_vertical {
+    animation-delay: -5100ms;
+  }
+  #ui .love:nth-child(18) .love_horizontal {
+    animation-delay: -5400ms;
+  }
+  #ui .love:nth-child(18) .love_vertical {
+    animation-delay: -5400ms;
+  }
+  #ui .love:nth-child(19) .love_horizontal {
+    animation-delay: -5700ms;
+  }
+  #ui .love:nth-child(19) .love_vertical {
+    animation-delay: -5700ms;
+  }
+  #ui .love:nth-child(20) .love_horizontal {
+    animation-delay: -6000ms;
+  }
+  #ui .love:nth-child(20) .love_vertical {
+    animation-delay: -6000ms;
+  }
+  #ui .love:nth-child(21) .love_horizontal {
+    animation-delay: -6300ms;
+  }
+  #ui .love:nth-child(21) .love_vertical {
+    animation-delay: -6300ms;
+  }
+  #ui .love:nth-child(22) .love_horizontal {
+    animation-delay: -6600ms;
+  }
+  #ui .love:nth-child(22) .love_vertical {
+    animation-delay: -6600ms;
+  }
+  #ui .love:nth-child(23) .love_horizontal {
+    animation-delay: -6900ms;
+  }
+  #ui .love:nth-child(23) .love_vertical {
+    animation-delay: -6900ms;
+  }
+  #ui .love:nth-child(24) .love_horizontal {
+    animation-delay: -7200ms;
+  }
+  #ui .love:nth-child(24) .love_vertical {
+    animation-delay: -7200ms;
+  }
+  #ui .love:nth-child(25) .love_horizontal {
+    animation-delay: -7500ms;
+  }
+  #ui .love:nth-child(25) .love_vertical {
+    animation-delay: -7500ms;
+  }
+  #ui .love:nth-child(26) .love_horizontal {
+    animation-delay: -7800ms;
+  }
+  #ui .love:nth-child(26) .love_vertical {
+    animation-delay: -7800ms;
+  }
+  #ui .love:nth-child(27) .love_horizontal {
+    animation-delay: -8100ms;
+  }
+  #ui .love:nth-child(27) .love_vertical {
+    animation-delay: -8100ms;
+  }
+  #ui .love:nth-child(28) .love_horizontal {
+    animation-delay: -8400ms;
+  }
+  #ui .love:nth-child(28) .love_vertical {
+    animation-delay: -8400ms;
+  }
+  #ui .love:nth-child(29) .love_horizontal {
+    animation-delay: -8700ms;
+  }
+  #ui .love:nth-child(29) .love_vertical {
+    animation-delay: -8700ms;
+  }
+  #ui .love:nth-child(30) .love_horizontal {
+    animation-delay: -9000ms;
+  }
+  #ui .love:nth-child(30) .love_vertical {
+    animation-delay: -9000ms;
+  }
+  #ui .love:nth-child(31) .love_horizontal {
+    animation-delay: -9300ms;
+  }
+  #ui .love:nth-child(31) .love_vertical {
+    animation-delay: -9300ms;
+  }
+  #ui .love:nth-child(32) .love_horizontal {
+    animation-delay: -9600ms;
+  }
+  #ui .love:nth-child(32) .love_vertical {
+    animation-delay: -9600ms;
+  }
+  #ui .love:nth-child(33) .love_horizontal {
+    animation-delay: -9900ms;
+  }
+  #ui .love:nth-child(33) .love_vertical {
+    animation-delay: -9900ms;
+  }
+  #ui .love:nth-child(34) .love_horizontal {
+    animation-delay: -10200ms;
+  }
+  #ui .love:nth-child(34) .love_vertical {
+    animation-delay: -10200ms;
+  }
+  #ui .love:nth-child(35) .love_horizontal {
+    animation-delay: -10500ms;
+  }
+  #ui .love:nth-child(35) .love_vertical {
+    animation-delay: -10500ms;
+  }
+  #ui .love:nth-child(36) .love_horizontal {
+    animation-delay: -10800ms;
+  }
+  #ui .love:nth-child(36) .love_vertical {
+    animation-delay: -10800ms;
+  }
+  #ui .love:nth-child(37) .love_horizontal {
+    animation-delay: -11100ms;
+  }
+  #ui .love:nth-child(37) .love_vertical {
+    animation-delay: -11100ms;
+  }
+  #ui .love:nth-child(38) .love_horizontal {
+    animation-delay: -11400ms;
+  }
+  #ui .love:nth-child(38) .love_vertical {
+    animation-delay: -11400ms;
+  }
+  #ui .love:nth-child(39) .love_horizontal {
+    animation-delay: -11700ms;
+  }
+  #ui .love:nth-child(39) .love_vertical {
+    animation-delay: -11700ms;
+  }
+  #ui .love:nth-child(40) .love_horizontal {
+    animation-delay: -12000ms;
+  }
+  #ui .love:nth-child(40) .love_vertical {
+    animation-delay: -12000ms;
+  }
+  #ui .love:nth-child(41) .love_horizontal {
+    animation-delay: -12300ms;
+  }
+  #ui .love:nth-child(41) .love_vertical {
+    animation-delay: -12300ms;
+  }
+  #ui .love:nth-child(42) .love_horizontal {
+    animation-delay: -12600ms;
+  }
+  #ui .love:nth-child(42) .love_vertical {
+    animation-delay: -12600ms;
+  }
+  #ui .love:nth-child(43) .love_horizontal {
+    animation-delay: -12900ms;
+  }
+  #ui .love:nth-child(43) .love_vertical {
+    animation-delay: -12900ms;
+  }
+  #ui .love:nth-child(44) .love_horizontal {
+    animation-delay: -13200ms;
+  }
+  #ui .love:nth-child(44) .love_vertical {
+    animation-delay: -13200ms;
+  }
+  #ui .love:nth-child(45) .love_horizontal {
+    animation-delay: -13500ms;
+  }
+  #ui .love:nth-child(45) .love_vertical {
+    animation-delay: -13500ms;
+  }
+  #ui .love:nth-child(46) .love_horizontal {
+    animation-delay: -13800ms;
+  }
+  #ui .love:nth-child(46) .love_vertical {
+    animation-delay: -13800ms;
+  }
+  #ui .love:nth-child(47) .love_horizontal {
+    animation-delay: -14100ms;
+  }
+  #ui .love:nth-child(47) .love_vertical {
+    animation-delay: -14100ms;
+  }
+  #ui .love:nth-child(48) .love_horizontal {
+    animation-delay: -14400ms;
+  }
+  #ui .love:nth-child(48) .love_vertical {
+    animation-delay: -14400ms;
+  }
+  #ui .love:nth-child(49) .love_horizontal {
+    animation-delay: -14700ms;
+  }
+  #ui .love:nth-child(49) .love_vertical {
+    animation-delay: -14700ms;
+  }
+  #ui .love:nth-child(50) .love_horizontal {
+    animation-delay: -15000ms;
+  }
+  #ui .love:nth-child(50) .love_vertical {
+    animation-delay: -15000ms;
+  }
+  #ui .love:nth-child(51) .love_horizontal {
+    animation-delay: -15300ms;
+  }
+  #ui .love:nth-child(51) .love_vertical {
+    animation-delay: -15300ms;
+  }
+  #ui .love:nth-child(52) .love_horizontal {
+    animation-delay: -15600ms;
+  }
+  #ui .love:nth-child(52) .love_vertical {
+    animation-delay: -15600ms;
+  }
+  #ui .love:nth-child(53) .love_horizontal {
+    animation-delay: -15900ms;
+  }
+  #ui .love:nth-child(53) .love_vertical {
+    animation-delay: -15900ms;
+  }
+  #ui .love:nth-child(54) .love_horizontal {
+    animation-delay: -16200ms;
+  }
+  #ui .love:nth-child(54) .love_vertical {
+    animation-delay: -16200ms;
+  }
+  #ui .love:nth-child(55) .love_horizontal {
+    animation-delay: -16500ms;
+  }
+  #ui .love:nth-child(55) .love_vertical {
+    animation-delay: -16500ms;
+  }
+  #ui .love:nth-child(56) .love_horizontal {
+    animation-delay: -16800ms;
+  }
+  #ui .love:nth-child(56) .love_vertical {
+    animation-delay: -16800ms;
+  }
+  #ui .love:nth-child(57) .love_horizontal {
+    animation-delay: -17100ms;
+  }
+  #ui .love:nth-child(57) .love_vertical {
+    animation-delay: -17100ms;
+  }
+  #ui .love:nth-child(58) .love_horizontal {
+    animation-delay: -17400ms;
+  }
+  #ui .love:nth-child(58) .love_vertical {
+    animation-delay: -17400ms;
+  }
+  #ui .love:nth-child(59) .love_horizontal {
+    animation-delay: -17700ms;
+  }
+  #ui .love:nth-child(59) .love_vertical {
+    animation-delay: -17700ms;
+  }
+  #ui .love:nth-child(60) .love_horizontal {
+    animation-delay: -18000ms;
+  }
+  #ui .love:nth-child(60) .love_vertical {
+    animation-delay: -18000ms;
+  }
+  #ui .love:nth-child(61) .love_horizontal {
+    animation-delay: -18300ms;
+  }
+  #ui .love:nth-child(61) .love_vertical {
+    animation-delay: -18300ms;
+  }
+  #ui .love:nth-child(62) .love_horizontal {
+    animation-delay: -18600ms;
+  }
+  #ui .love:nth-child(62) .love_vertical {
+    animation-delay: -18600ms;
+  }
+  #ui .love:nth-child(63) .love_horizontal {
+    animation-delay: -18900ms;
+  }
+  #ui .love:nth-child(63) .love_vertical {
+    animation-delay: -18900ms;
+  }
+  #ui .love:nth-child(64) .love_horizontal {
+    animation-delay: -19200ms;
+  }
+  #ui .love:nth-child(64) .love_vertical {
+    animation-delay: -19200ms;
+  }
+  #ui .love:nth-child(65) .love_horizontal {
+    animation-delay: -19500ms;
+  }
+  #ui .love:nth-child(65) .love_vertical {
+    animation-delay: -19500ms;
+  }
+  #ui .love:nth-child(66) .love_horizontal {
+    animation-delay: -19800ms;
+  }
+  #ui .love:nth-child(66) .love_vertical {
+    animation-delay: -19800ms;
+  }
+  #ui .love:nth-child(67) .love_horizontal {
+    animation-delay: -20100ms;
+  }
+  #ui .love:nth-child(67) .love_vertical {
+    animation-delay: -20100ms;
+  }
+  #ui .love:nth-child(68) .love_horizontal {
+    animation-delay: -20400ms;
+  }
+  #ui .love:nth-child(68) .love_vertical {
+    animation-delay: -20400ms;
+  }
+  #ui .love:nth-child(69) .love_horizontal {
+    animation-delay: -20700ms;
+  }
+  #ui .love:nth-child(69) .love_vertical {
+    animation-delay: -20700ms;
+  }
+  #ui .love:nth-child(70) .love_horizontal {
+    animation-delay: -21000ms;
+  }
+  #ui .love:nth-child(70) .love_vertical {
+    animation-delay: -21000ms;
+  }
+  #ui .love:nth-child(71) .love_horizontal {
+    animation-delay: -21300ms;
+  }
+  #ui .love:nth-child(71) .love_vertical {
+    animation-delay: -21300ms;
+  }
+  #ui .love:nth-child(72) .love_horizontal {
+    animation-delay: -21600ms;
+  }
+  #ui .love:nth-child(72) .love_vertical {
+    animation-delay: -21600ms;
+  }
+  #ui .love:nth-child(73) .love_horizontal {
+    animation-delay: -21900ms;
+  }
+  #ui .love:nth-child(73) .love_vertical {
+    animation-delay: -21900ms;
+  }
+  #ui .love:nth-child(74) .love_horizontal {
+    animation-delay: -22200ms;
+  }
+  #ui .love:nth-child(74) .love_vertical {
+    animation-delay: -22200ms;
+  }
+  #ui .love:nth-child(75) .love_horizontal {
+    animation-delay: -22500ms;
+  }
+  #ui .love:nth-child(75) .love_vertical {
+    animation-delay: -22500ms;
+  }
+  #ui .love:nth-child(76) .love_horizontal {
+    animation-delay: -22800ms;
+  }
+  #ui .love:nth-child(76) .love_vertical {
+    animation-delay: -22800ms;
+  }
+  #ui .love:nth-child(77) .love_horizontal {
+    animation-delay: -23100ms;
+  }
+  #ui .love:nth-child(77) .love_vertical {
+    animation-delay: -23100ms;
+  }
+  #ui .love:nth-child(78) .love_horizontal {
+    animation-delay: -23400ms;
+  }
+  #ui .love:nth-child(78) .love_vertical {
+    animation-delay: -23400ms;
+  }
+  #ui .love:nth-child(79) .love_horizontal {
+    animation-delay: -23700ms;
+  }
+  #ui .love:nth-child(79) .love_vertical {
+    animation-delay: -23700ms;
+  }
+  #ui .love:nth-child(80) .love_horizontal {
+    animation-delay: -24000ms;
+  }
+  #ui .love:nth-child(80) .love_vertical {
+    animation-delay: -24000ms;
+  }
+  #ui .love:nth-child(81) .love_horizontal {
+    animation-delay: -24300ms;
+  }
+  #ui .love:nth-child(81) .love_vertical {
+    animation-delay: -24300ms;
+  }
+  #ui .love:nth-child(82) .love_horizontal {
+    animation-delay: -24600ms;
+  }
+  #ui .love:nth-child(82) .love_vertical {
+    animation-delay: -24600ms;
+  }
+  #ui .love:nth-child(83) .love_horizontal {
+    animation-delay: -24900ms;
+  }
+  #ui .love:nth-child(83) .love_vertical {
+    animation-delay: -24900ms;
+  }
+  #ui .love:nth-child(84) .love_horizontal {
+    animation-delay: -25200ms;
+  }
+  #ui .love:nth-child(84) .love_vertical {
+    animation-delay: -25200ms;
+  }
+  #ui .love:nth-child(85) .love_horizontal {
+    animation-delay: -25500ms;
+  }
+  #ui .love:nth-child(85) .love_vertical {
+    animation-delay: -25500ms;
+  }
+  #ui .love:nth-child(86) .love_horizontal {
+    animation-delay: -25800ms;
+  }
+  #ui .love:nth-child(86) .love_vertical {
+    animation-delay: -25800ms;
+  }
+  #ui .love:nth-child(87) .love_horizontal {
+    animation-delay: -26100ms;
+  }
+  #ui .love:nth-child(87) .love_vertical {
+    animation-delay: -26100ms;
+  }
+  #ui .love:nth-child(88) .love_horizontal {
+    animation-delay: -26400ms;
+  }
+  #ui .love:nth-child(88) .love_vertical {
+    animation-delay: -26400ms;
+  }
+  #ui .love:nth-child(89) .love_horizontal {
+    animation-delay: -26700ms;
+  }
+  #ui .love:nth-child(89) .love_vertical {
+    animation-delay: -26700ms;
+  }
+  #ui .love:nth-child(90) .love_horizontal {
+    animation-delay: -27000ms;
+  }
+  #ui .love:nth-child(90) .love_vertical {
+    animation-delay: -27000ms;
+  }
+  #ui .love:nth-child(91) .love_horizontal {
+    animation-delay: -27300ms;
+  }
+  #ui .love:nth-child(91) .love_vertical {
+    animation-delay: -27300ms;
+  }
+  #ui .love:nth-child(92) .love_horizontal {
+    animation-delay: -27600ms;
+  }
+  #ui .love:nth-child(92) .love_vertical {
+    animation-delay: -27600ms;
+  }
+  #ui .love:nth-child(93) .love_horizontal {
+    animation-delay: -27900ms;
+  }
+  #ui .love:nth-child(93) .love_vertical {
+    animation-delay: -27900ms;
+  }
+  #ui .love:nth-child(94) .love_horizontal {
+    animation-delay: -28200ms;
+  }
+  #ui .love:nth-child(94) .love_vertical {
+    animation-delay: -28200ms;
+  }
+  #ui .love:nth-child(95) .love_horizontal {
+    animation-delay: -28500ms;
+  }
+  #ui .love:nth-child(95) .love_vertical {
+    animation-delay: -28500ms;
+  }
+  #ui .love:nth-child(96) .love_horizontal {
+    animation-delay: -28800ms;
+  }
+  #ui .love:nth-child(96) .love_vertical {
+    animation-delay: -28800ms;
+  }
+  #ui .love:nth-child(97) .love_horizontal {
+    animation-delay: -29100ms;
+  }
+  #ui .love:nth-child(97) .love_vertical {
+    animation-delay: -29100ms;
+  }
+  #ui .love:nth-child(98) .love_horizontal {
+    animation-delay: -29400ms;
+  }
+  #ui .love:nth-child(98) .love_vertical {
+    animation-delay: -29400ms;
+  }
+  #ui .love:nth-child(99) .love_horizontal {
+    animation-delay: -29700ms;
+  }
+  #ui .love:nth-child(99) .love_vertical {
+    animation-delay: -29700ms;
+  }
+  #ui .love:nth-child(100) .love_horizontal {
+    animation-delay: -30000ms;
+  }
+  #ui .love:nth-child(100) .love_vertical {
+    animation-delay: -30000ms;
+  }
+  
+  @keyframes horizontal {
+    from {
+      transform: translateX(0px);
+    }
+    to {
+      transform: translateX(450px);
+    }
+  }
+  @keyframes vertical {
+    0% {
+      transform: translateY(180px);
+    }
+    10% {
+      transform: translateY(45px);
+    }
+    15% {
+      transform: translateY(4.5px);
+    }
+    18% {
+      transform: translateY(0px);
+    }
+    20% {
+      transform: translateY(4.5px);
+    }
+    22% {
+      transform: translateY(34.61538px);
+    }
+    24% {
+      transform: translateY(64.28571px);
+    }
+    25% {
+      transform: translateY(112.5px);
+    }
+    26% {
+      transform: translateY(64.28571px);
+    }
+    28% {
+      transform: translateY(34.61538px);
+    }
+    30% {
+      transform: translateY(4.5px);
+    }
+    32% {
+      transform: translateY(0px);
+    }
+    35% {
+      transform: translateY(4.5px);
+    }
+    40% {
+      transform: translateY(45px);
+    }
+    50% {
+      transform: translateY(180px);
+    }
+    71% {
+      transform: translateY(428.57143px);
+    }
+    72.5% {
+      transform: translateY(441.17647px);
+    }
+    75% {
+      transform: translateY(450px);
+    }
+    77.5% {
+      transform: translateY(441.17647px);
+    }
+    79% {
+      transform: translateY(428.57143px);
+    }
+    100% {
+      transform: translateY(180px);
+    }
+  }
+  
+  
+  #ui .love_horizontal {
+    animation: horizontal 10s infinite alternate ease-in-out;
+  }
+  
+  #ui .love_vertical {
+    animation: vertical 20s infinite linear;
+  }
+  #ui .love_word {
+    color: #ff69b4; /* pink */
+    font-size: 20px;
+    text-shadow: 0 0 10px #fff;
+    font-family: 'Dosis', sans-serif;
+  }
+  
+  @keyframes horizontal {
+    from { transform: translateX(0px); }
+    to { transform: translateX(450px); }
+  }
+  
+  .birthday-text{
+    position:absolute;
+    top:35%;
+    width:100%;
+    text-align:center;
+    font-family:'Dosis', sans-serif;
+  }
+  
+  .birthday-text span{
+    display:block;
+    font-size:32px;
+    color:#ff69b4;
+    text-shadow:0 0 20px #ff69b4, 0 0 40px #fff;
+    opacity:0;
+    transform:translateY(40px);
+    animation:fadeLine 1.5s ease forwards;
+  }
+  
+  /* delay tiap baris (biar cinematic) */
+  .birthday-text span:nth-child(1){animation-delay:1s;}
+  .birthday-text span:nth-child(2){animation-delay:3s;}
+  .birthday-text span:nth-child(3){animation-delay:5s;}
+  .birthday-text span:nth-child(4){animation-delay:7s;}
+  
+  @keyframes fadeLine{
+    to{
+      opacity:1;
+      transform:translateY(0);
+    }
+  }
+  /* ===== PINK PASTEL THEME ===== */
+
+body{
+    background: linear-gradient(135deg, #ffe4ec, #ffd6e7);
+  }
+  
+  /* tombol */
+  body .birthday .add,
+  body .birthday_inner__stage button{
+    border: 2px solid #ff9ecb;
+    color: #ff9ecb;
+  }
+  
+  body .birthday .add:hover,
+  body .birthday_inner__stage button:hover{
+    background:#ff9ecb;
+    color:white;
+  }
+  
+  /* modal */
+  body .birthday_inner__modal{
+    background:#fff0f5;
+    box-shadow: 0px 5px 20px #ffc0cb;
+  }
+  
+  body .birthday_inner__modal h1{
+    color:#ff69b4;
+  }
+  
+  body .birthday_inner__modal p{
+    color:#d48aa3;
+  }
+  
+  /* text */
+  body .birthday_inner__stage h1{
+    color:#ff69b4;
+  }
+  
+  body .birthday_inner__stage h2{
+    color:#d48aa3;
+  }
+  
+  /* ===== TAMBAHAN BIAR LEBIH SOFT & NYATU ===== */
+  
+  /* love animation */
+  #ui .love_word{
+    color:#ff85c1;
+    text-shadow: 0 0 15px #ffc0cb, 0 0 30px #fff;
+  }
+  
+  /* gallery */
+  #gallery_slide{
+    background: linear-gradient(to bottom, #ffe4ec, #fff0f5);
+  }
+  
+  /* text akhir (bucin) */
+  .birthday-text span{
+    color:#ff69b4;
+    text-shadow:0 0 15px #ffc0cb, 0 0 30px #fff;
+  }
+  
+  /* ===== MOBILE RESPONSIVE ===== */
+  @media (max-width: 768px){
+  
+    body .birthday_inner__stage{
+      width:90%;
+    }
+  
+    body .birthday_inner__modal{
+      width:90%;
+      padding:30px;
+    }
+  
+    .track img{
+      width:120px;
+      height:120px;
+    }
+  
+    .birthday-text span{
+      font-size:20px;
+      padding:0 10px;
+    }
+  
+    #ui .love_word{
+      font-size:14px;
+    }
+  
+  }
+  /* FOTO ITEM */
+.foto-item{
+    position:relative;
+    display:inline-block;
+  }
+  
+  /* TEXT DI FOTO */
+  .text-foto{
+    position:absolute;
+    bottom:10px;
+    left:50%;
+    transform:translateX(-50%);
+    color:#fff;
+    font-size:18px;
+    font-family:'Dosis', sans-serif;
+    text-shadow:0 0 10px #000;
+  
+    opacity:0;
+    animation:fadeUp 2s ease forwards;
+  }
+  
+  /* animasi muncul */
+  @keyframes fadeUp{
+    from{
+      opacity:0;
+      transform:translate(-50%, 20px);
+    }
+    to{
+      opacity:1;
+      transform:translate(-50%, 0);
+    }
+  }
