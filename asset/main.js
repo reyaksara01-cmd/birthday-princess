@@ -80,6 +80,11 @@ $(document).ready(function () {
             });
 
             $('.tin').draggable({ revert: true });
+            // 🔥 SUPPORT HP (TAP MASUK OVEN)
+$('.tin').on('click touchstart', function () {
+    $('.stage3').fadeOut();
+    fire_modal('asset/img/oven_modal.png', 'Berhasil dipanggang!', '...');
+});
 
             $(".oven").droppable({
                 drop: function () {
