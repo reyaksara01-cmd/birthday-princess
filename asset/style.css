@@ -11,6 +11,7 @@ body {
     margin: 0;
   }
 
+  
 
 body .birthday .add {
     margin-top: 40px;
@@ -47,6 +48,40 @@ body .birthday_inner__modal {
     z-index: 2;
     padding: 40px 40px 100px 40px;
     box-shadow: 0px 3px 10px 0px #e5b4b2;
+}
+@media (max-width: 768px){
+
+  .mix_spoon{
+    transform: scale(0.7);
+    transform-origin: center;
+  }
+
+}
+.mix{
+  position: relative;
+  overflow: visible;
+}
+/* ===== FIX LOVE AGAR TIDAK KEPOTONG ===== */
+
+#ui .love{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%) scale(0.9);
+}
+
+/* kecilkan & rapikan di HP */
+@media (max-width:768px){
+
+  #ui .love{
+    transform:translate(-50%, -50%) scale(0.65); /* 🔥 ini kunci */
+  }
+
+  #ui .love_word{
+    font-size:12px !important; /* 🔥 kecilin teks */
+    letter-spacing:1px;
+  }
+
 }
 
 body .birthday_inner__modal .modal_image {
@@ -651,11 +686,25 @@ line {
   }
   
   .track img{
-    width:200px;
-    height:200px;
+    width:260px; /* 🔥 lebih besar */
+    height:260px;
     margin:10px;
     border-radius:20px;
     object-fit:cover;
+  
+    /* ✨ shadow */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    transition:0.3s;
+  }
+  .track img:hover{
+    transform:scale(1.05);
+    box-shadow: 0 15px 35px rgba(255,105,180,0.4);
+  }
+  @media (max-width:768px){
+    .track img{
+      width:160px;
+      height:160px;
+    }
   }
   
   /* animasi geser */
@@ -1575,16 +1624,37 @@ body{
   /* TEXT DI FOTO */
   .text-foto{
     position:absolute;
-    bottom:10px;
+    bottom:8px;
     left:50%;
     transform:translateX(-50%);
+    
     color:#fff;
-    font-size:18px;
+    font-size:12px; /* 🔥 kecilin */
     font-family:'Dosis', sans-serif;
-    text-shadow:0 0 10px #000;
+    text-shadow:0 0 6px #000;
   
     opacity:0;
     animation:fadeUp 2s ease forwards;
+  }
+  @media (max-width: 768px){
+    .text-foto{
+      font-size:10px;
+      bottom:5px;
+    }
+  }
+  .track{
+    display:flex;
+    width:max-content;
+    animation:slide 20s linear infinite;
+  }
+  
+  @keyframes slide{
+    from{
+      transform:translateX(0);
+    }
+    to{
+      transform:translateX(-50%);
+    }
   }
   
   /* animasi muncul */
@@ -1598,3 +1668,13 @@ body{
       transform:translate(-50%, 0);
     }
   }
+  @media (max-width: 768px){
+
+    body .birthday_inner__stage .mix_spoon{
+      left: 50% !important;
+      transform: translateX(-50%);
+      top: -20px; /* biar pas di mangkuk */
+    }
+  
+  }
+  
