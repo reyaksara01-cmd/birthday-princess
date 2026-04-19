@@ -211,11 +211,40 @@ body .birthday_inner__stage .candle img {
 }
 
 body .birthday_inner__stage .startagain {
-    position: absolute;
-    right: 0;
-    top: 350px;
-    font-size: 24px;
-    color: #e77572;
+  position: relative;   /* 🔥 ubah dari absolute */
+  top: 0;
+  right: 0;
+  display: block;
+  text-align: center;
+  margin-top: 20px;     /* jarak dari tombol */
+  font-size: 24px;
+  color: #e77572;
+}
+/* jarak dari fillings ke kue */
+body .birthday_inner__stage .options {
+  position: relative;
+  left: 12px;
+  margin-bottom: 30px; /* 🔥 tambah ini */
+}
+
+/* jarak kue */
+body .birthday_inner__stage .cakemake {
+  margin-top: 230px;
+  margin-bottom: 30px; /* 🔥 tambah ini */
+  clear: both;
+  text-align: center;
+}
+
+/* posisi & jarak tombol mulai lagi */
+body .birthday_inner__stage .startagain {
+  position: relative;
+  top: 0;
+  right: 0;
+  display: block;
+  text-align: center;
+  margin-top: 20px; /* 🔥 ini jarak dari kue */
+  font-size: 24px;
+  color: #e77572;
 }
 
 body .birthday_inner__stage .cakemake {
